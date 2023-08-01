@@ -1,0 +1,99 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: salmon;
+  font-family: 'Courier New', Courier, monospace;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+img{
+  width: 450px;
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  border-radius: 50%;
+  z-index: 3;
+}
+.clock{
+  position: relative;
+  background-color: lightgrey;
+  height: 550px;
+  width: 550px;
+  border-radius: 50%;
+  border: 5px solid rgb(86, 86, 126);
+  box-shadow: 5px 5px 4px rgb(0, 0, 0, 0.7);
+  
+}
+.number div{
+  position: absolute;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(117, 121, 116);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.twelve{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 10px;
+}
+.three{
+  position: relative;
+  left:95%;
+  transform: translate(-50%);
+  top: 250px;
+}
+.six{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 510px;
+}
+.nine{
+  position: absolute;
+  z-index: 9;
+  left: 4%;
+  transform: translate(-40%);
+  top: 250px;
+}
+.arrow{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center; 
+}
+.arrow::before{
+  content: "";
+  width: 28px;
+  height: 28px;
+  background-color: darkgoldenrod;
+  z-index: 6;
+  border-radius: 50%;
+  box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.7);
+}
+.arrow div{
+  background-color: rgb(166, 147, 185);
+  position: absolute;
+  width: 10px;
+  height: 150px;
+  z-index: 4;
+  transform-origin: bottom center;
+  bottom: 50%;
+  /* this will make the handeler sharper at the top of both side  */
+  border-radius: 50% 50% 0 0;
+  border-style:1px 1px solid;
+  box-shadow: 1px 1px 4px rgb(0, 0, 0 1);
+}
+.arrow .hour{
+  height:110px;
+  transform:rotate(30deg);
+}
+.arrow .second{
+  
+  transform:rotate(250deg);
+  background-color: goldenrod;
+}
